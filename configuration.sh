@@ -45,7 +45,7 @@ MAINLINE_KERNEL_DIR='linux-vanilla'
 
 MAINLINE_UBOOT_SOURCE='git://git.denx.de/u-boot.git'
 #MAINLINE_UBOOT_BRANCH="v$(git ls-remote git://git.denx.de/u-boot.git | grep -v rc | grep -v '\^' | tail -1 | cut -d'v' -f 2)"
-MAINLINE_UBOOT_BRANCH='tag:v2016.09'
+MAINLINE_UBOOT_BRANCH='tag:v2016.09.01'
 MAINLINE_UBOOT_DIR='u-boot'
 
 # Let's set default data if not defined in board configuration above
@@ -142,7 +142,7 @@ case $RELEASE in
 	;;
 	jessie)
 	PACKAGE_LIST_RELEASE="less makedev kbd libpam-systemd iperf3 software-properties-common libnss-myhostname f2fs-tools"
-	PACKAGE_LIST_DESKTOP="$PACKAGE_LIST_DESKTOP mozo pluma iceweasel libreoffice-writer icedove policykit-1 policykit-1-gnome eject"
+	PACKAGE_LIST_DESKTOP="$PACKAGE_LIST_DESKTOP mozo pluma iceweasel libreoffice-writer libreoffice-style-tango libreoffice-gtk policykit-1 policykit-1-gnome eject"
 	;;
 	trusty)
 	PACKAGE_LIST_RELEASE="man-db wget nano software-properties-common iperf f2fs-tools acpid"
@@ -150,7 +150,7 @@ case $RELEASE in
 	;;
 	xenial)
 	PACKAGE_LIST_RELEASE="man-db wget nano libpam-systemd software-properties-common libnss-myhostname f2fs-tools iperf3 paprefs"
-	PACKAGE_LIST_DESKTOP="$PACKAGE_LIST_DESKTOP libreoffice-writer thunderbird firefox gnome-icon-theme-full tango-icon-theme policykit-1"
+	PACKAGE_LIST_DESKTOP="$PACKAGE_LIST_DESKTOP libreoffice-writer libreoffice-style-tango libreoffice-gtk thunderbird firefox gnome-icon-theme-full tango-icon-theme policykit-1"
 	;;
 esac
 
